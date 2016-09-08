@@ -1,0 +1,24 @@
+{
+  "name": "myclinic-server",
+  "version": "1.0.0",
+  "description": "Main web server for myclinic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hangilc/myclinic-server.git"
+  },
+  "author": "Hangil Chang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hangilc/myclinic-server/issues"
+  },
+  "homepage": "https://github.com/hangilc/myclinic-server#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "myclinic-practice": "^1.0.0"
+  }
+}
