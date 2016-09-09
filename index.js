@@ -20,10 +20,17 @@ subs.forEach(function(sub){
 	var subApp = express();
 	subApp.use(bodyParser.urlencoded({extended: false}));
 	subApp.use(bodyParser.json());
-	subApp.use(express.static("static"));
 	pkg.initApp(subApp, config);
+	if( pkg.staticDir ){
+		console.log(pkg.staticDir);
+		subApp.use(express.static(pkg.staticDir));
+	}
 	app.use("/" + name, subApp);
 });
+
+app.get("/", function(req, res){
+	res.send("hello");
+})
 
 var port = 9000;
 app.listen(port, function(){
