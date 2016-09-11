@@ -4,7 +4,7 @@ var fs = require("fs");
 
 module.exports = {
 	dbConfig: {
-            host: process.env.MYCLINIC_DB_HOST,
+        host: process.env.MYCLINIC_DB_HOST,
 	    user: process.env.MYCLINIC_DB_USER,
 	    password: process.env.MYCLINIC_DB_PASS,
 	    database: "myclinic",
