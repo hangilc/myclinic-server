@@ -1,6 +1,6 @@
 {
   "name": "myclinic-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Main web server for myclinic",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "myclinic-practice": "^1.1.1"
+    "myclinic-practice": "^1.1.1",
+    "myclinic-shohousen": "^1.0.1"
   }
 }

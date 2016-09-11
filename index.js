@@ -9,6 +9,10 @@ var subs = [
 	{
 		name: "practice",
 		package: "myclinic-practice"
+	},
+	{
+		name: "shohousen",
+		package: "myclinic-shohousen"
 	}
 ];
 
