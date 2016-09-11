@@ -13,6 +13,10 @@ var subs = [
 	{
 		name: "shohousen",
 		package: "myclinic-shohousen"
+	},
+	{
+		name: "refer",
+		package: "myclinic-refer"
 	}
 ];
 
