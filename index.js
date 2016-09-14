@@ -6,6 +6,10 @@ var bodyParser = require("body-parser");
 var app = express();
 
 var subs = [
+	{ 
+		name: "service",
+		package: "myclinic-service"
+	},
 	{
 		name: "practice",
 		package: "myclinic-practice"

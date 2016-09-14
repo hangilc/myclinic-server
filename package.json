@@ -20,7 +20,8 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "myclinic-practice": "^1.1.1",
-    "myclinic-shohousen": "^1.0.1",
-    "myclinic-refer": "^1.0.1"
+    "myclinic-refer": "^1.0.1",
+    "myclinic-service": "^1.0.0",
+    "myclinic-shohousen": "^1.0.1"
   }
 }
