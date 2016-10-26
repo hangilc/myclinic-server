@@ -5,6 +5,20 @@ var bodyParser = require("body-parser");
 var config = require("myclinic-config").create();
 var app = express();
 
+if( !Object.assign ){
+	Object.assign = function(){
+		var dst = arguments[0];
+		var i, n = arguments.length, o;
+		for(i=1;i<n;i++){
+			o = arguments[i];
+			Object.keys(o).forEach(function(key){
+				dst[key] = o[key];
+			});
+		}
+		return dst;
+	};
+}
+
 var subs = [
 	{ 
 		name: "service",
