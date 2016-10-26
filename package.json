@@ -1,6 +1,6 @@
 {
   "name": "myclinic-server",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Main web server for myclinic",
   "main": "index.js",
   "scripts": {
