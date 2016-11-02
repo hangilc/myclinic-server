@@ -22,7 +22,7 @@ if( !Object.assign ){
 var subs = [
 	{ 
 		name: "service",
-		package: "myclinic-service",
+		"package": "myclinic-service",
 		config: {
 			dbConfig: config.get("database"),
 			masterMap: config.get("master-map"),
@@ -32,23 +32,28 @@ var subs = [
 	},
 	{
 		name: "practice",
-		package: "myclinic-practice",
+		"package": "myclinic-practice",
 		config: {}
 	},
 	{
 		name: "shohousen",
-		package: "myclinic-shohousen",
+		"package": "myclinic-shohousen",
 		config: Object.assign({}, config.get("shohousen"), {
 			"print-server-port": config.get("print-server-port")
 		})
 	},
 	{
 		name: "refer",
-		package: "myclinic-refer",
+		"package": "myclinic-refer",
 		config: Object.assign({}, config.get("refer"), {
 			predefined: config.get("refer-predefined"),
 			"print-server-port": config.get("print-server-port")
 		})
+	},
+	{
+		name: "printer",
+		"package": "myclinic-drawer-print-server",
+		config: {}
 	}
 ];
 
