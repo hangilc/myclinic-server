@@ -2,7 +2,7 @@
 
 var express = require("express");
 var bodyParser = require("body-parser");
-var config = require("myclinic-config").create();
+var config = require("myclinic-config").create(process.env.MYCLINIC_CONFIG_DIR);
 var app = express();
 
 if( !Object.assign ){
@@ -30,6 +30,7 @@ var subs = [
 			houkatsuList: config.get("rcpt-houkatsu")
 		}
 	},
+	/**
 	{
 		name: "practice",
 		"package": "myclinic-practice",
@@ -55,6 +56,7 @@ var subs = [
 		"package": "myclinic-drawer-print-server",
 		config: {}
 	}
+	**/
 ];
 
 subs.forEach(function(sub){
@@ -72,9 +74,9 @@ subs.forEach(function(sub){
 	app.use("/" + name, subApp);
 });
 
-app.get("/", function(req, res){
-	res.send("hello");
-})
+// app.get("/", function(req, res){
+// 	res.send("hello");
+// })
 
 var port = 9000;
 app.listen(port, function(){
