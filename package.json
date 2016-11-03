@@ -18,8 +18,9 @@
   "homepage": "https://github.com/hangilc/myclinic-server#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "commander": "^2.9.0",
     "express": "^4.14.0",
-    "myclinic-config": "^1.0.4",
+    "myclinic-config": "^2.1.0",
     "myclinic-service": "^1.0.0"
   }
 }
