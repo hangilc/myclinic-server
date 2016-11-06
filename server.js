@@ -20,18 +20,20 @@ var config = {
 };
 
 program
-	.option("-c, --config <configpath>", "Read config")
-	.option("-p, --port <port>", "Listening port", parseInt)
+	.option("-c, --config <configpath>", "Read config", process.env.MYCLINIC_CONFIG)
+	.option("-p, --port <port>", "Listening port", parseInt, 9000)
 	.parse(process.argv)
 
-if( program.config ){
-	Config.extend(config, Config.read(program.config));
-} else {
-	Config.extend(config, Config.read(path.join(process.env.MYCLINIC_CONFIG, "server")));
-}
-if( program.port ){
-	config.port = program.port;
-}
+var srcConfig = Config.read(program.config);
+var config = srcConfig["server"];
+var subconfig = {};
+Object.keys(srcConfig).forEach(function(key){
+	if( key === "server" ){
+		return;
+	}
+	subconfig[key] = srcConfig[key];
+});
+config["subconfig"] = subconfig;
 
 server.run(config);
 

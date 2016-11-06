@@ -35,6 +35,11 @@ exports.run = function(config){
 		app.use("/" + name, subApp);
 	});
 
+	app.get("/config/:name", function(req, res){
+		var key = req.params.name;
+		res.json(config.subconfig[key]);
+	});
+
 	app.listen(port, function(){
 		console.log("myclinic server listening to " + port);
 	});
