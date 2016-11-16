@@ -393,8 +393,8 @@
       }
     },
     "myclinic-service": {
-      "version": "1.0.4",
-      "from": "myclinic-service@1.0.4",
+      "version": "1.0.5",
+      "from": "myclinic-service@1.0.5",
       "dependencies": {
         "conti": {
           "version": "1.3.4",
