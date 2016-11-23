@@ -13,6 +13,6 @@ program
 var srcConfig = program.config;
 var config = Config.read(path.join(srcConfig, "server"));
 config.port = program.port;
-config.subconfig = Config.readGlob(paht.join(srcConfig, "subs"));
+config.subconfig = Config.read(path.join(srcConfig, "subs"));
 server.run(config);
 
