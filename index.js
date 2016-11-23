@@ -11,6 +11,15 @@ exports.run = function(config){
 		{ 
 			name: "service",
 			"package": "myclinic-service",
+			config: config
+		},
+	];
+	
+	/**
+	var subs = [
+		{ 
+			name: "service",
+			"package": "myclinic-service",
 			config: {
 				dbConfig: config["database"],
 				masterMap: config["master-map"],
@@ -19,6 +28,7 @@ exports.run = function(config){
 			}
 		},
 	];
+	**/
 
 	subs.forEach(function(sub){
 		var name = sub.name;

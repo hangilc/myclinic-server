@@ -20,7 +20,7 @@
     "body-parser": "^1.15.2",
     "commander": "^2.9.0",
     "express": "^4.14.0",
-    "myclinic-config": "^2.2.1",
+    "myclinic-config": "^2.3.0",
     "myclinic-service": "^1.0.0"
   }
 }
