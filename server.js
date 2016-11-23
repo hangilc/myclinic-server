@@ -5,9 +5,13 @@ var server = require("./index");
 var program = require("commander");
 var path = require("path");
 
+function intValue(arg){
+	return parseInt(arg);
+}
+
 program
 	.option("-c, --config <configpath>", "Read config", process.env.MYCLINIC_CONFIG)
-	.option("-p, --port <port>", "Listening port", parseInt, 9000)
+	.option("-p, --port <port>", "Listening port", intValue, 9000)
 	.parse(process.argv)
 
 var srcConfig = program.config;
