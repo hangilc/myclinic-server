@@ -47,7 +47,12 @@ exports.run = function(config){
 
 	app.get("/config/:name", function(req, res){
 		var key = req.params.name;
-		res.json(config.subconfig[key]);
+		var conf = config.subconfig[key];
+		if( !conf || conf === {} ){
+			res.send("{}");
+		} else {
+			res.json(config.subconfig[key]);
+		}
 	});
 
 	app.listen(port, function(){
