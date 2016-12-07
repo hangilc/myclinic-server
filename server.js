@@ -17,6 +17,10 @@ program
 var srcConfig = program.config;
 var config = Config.read(path.join(srcConfig, "server"));
 config.port = program.port;
-config.subconfig = Config.read(path.join(srcConfig, "subs"));
+//config.subconfig = Config.read(path.join(srcConfig, "subs"));
+config.subconfig = {};
+["refer", "cashier", "pharma", "practice", "shohousen"].forEach(function(sub){
+	config.subconfig = Config.read(path.join(srcConfig, sub));
+});
 server.run(config);
 
