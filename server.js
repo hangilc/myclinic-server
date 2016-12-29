@@ -20,7 +20,7 @@ config.port = program.port;
 //config.subconfig = Config.read(path.join(srcConfig, "subs"));
 config.subconfig = {};
 ["refer", "cashier", "pharma", "practice", "shohousen"].forEach(function(sub){
-	config.subconfig = Config.read(path.join(srcConfig, sub));
+	config.subconfig[sub] = Config.read(path.join(srcConfig, "subs", sub));
 });
 server.run(config);
 
