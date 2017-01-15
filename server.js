@@ -10,8 +10,9 @@ function intValue(arg){
 }
 
 program
-	.option("-c, --config <configpath>", "Read config", process.env.MYCLINIC_CONFIG)
-	.option("-p, --port <port>", "Listening port", intValue, 9000)
+	.option("-c, --config <configpath>", "confiugration directory", process.env.MYCLINIC_CONFIG)
+	.option("-p, --port <port>", "listening port", intValue, 9000)
+	.option("--db-host [database-host]", "database host")
 	.parse(process.argv)
 
 var srcConfig = program.config;
@@ -22,5 +23,8 @@ config.subconfig = {};
 ["refer", "cashier", "pharma", "practice", "shohousen"].forEach(function(sub){
 	config.subconfig[sub] = Config.read(path.join(srcConfig, "subs", sub));
 });
+if( program.dbHost ){
+	config.dbConfig.host = program.dbHost;
+}
 server.run(config);
 
