@@ -1,2 +1,2 @@
-node server -c "C:\myclinic-configuration" -p 9000
+node server -c ..\myclinic-configuration -p 9000
 
